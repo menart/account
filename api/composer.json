@@ -1,0 +1,20 @@
+{
+  "name": "menart/account",
+  "description": "Учет первичных бухгалтерских документов",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "menart",
+      "email": "aleksandr@artamonov.in"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "API\\": "api"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9"
+  }
+}
