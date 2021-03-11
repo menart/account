@@ -2,15 +2,22 @@ version: "3.5"
 
 services:
 
-  front:
-    build: front/
+  nginx:
+    build: nginx/
     ports:
       - 80:80
     volumes:
-      - ./front/default.conf:/etc/nginx/conf.d/default.conf
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
       - ../log/front:/var/log/nginx
       - phpsocket:/var/run
       - ../api:/www
+
+  front:
+    build: front/
+    ports:
+      - 8000:8080
+    volumes:
+      - ../front:/front
 
   back:
     build: back/

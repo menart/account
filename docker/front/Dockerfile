@@ -1,3 +1,8 @@
-FROM nginx:1.19.6
-WORKDIR /www
-EXPOSE 80
+FROM node
+
+RUN npm install -g @vue/cli
+# делаем каталог 'app' текущим рабочим каталогом
+WORKDIR /front
+
+EXPOSE 8000
+CMD [ "npm","run","serve" ]

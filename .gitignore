@@ -4,3 +4,4 @@ arh
 api/vendor
 .idea
 api/composer.lock
+api/config/config.ini
